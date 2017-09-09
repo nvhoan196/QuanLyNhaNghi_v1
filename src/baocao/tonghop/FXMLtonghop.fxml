@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baocao.tonghop.FXMLtonghopController">
+   <padding>
+      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+   </padding>
+   <top>
+      <VBox alignment="CENTER_LEFT" spacing="8.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="8.0">
+               <children>
+                  <Label text="Báo cáo tổng hợp:" textFill="#ea1ab3">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox>
+               <children>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Label prefWidth="300.0" text="Tổng số thiết bị:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbTongThietBi" alignment="CENTER_RIGHT" text="0" textFill="#0d00fc">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefWidth="200.0" text="thiết bị">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Label prefWidth="300.0" text="Tổng số khách hàng:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbTongKhachHang" alignment="CENTER_RIGHT" text="0" textFill="#0d00fc">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefWidth="200.0" text="khách hàng">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Label prefWidth="300.0" text="Tổng số phòng:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbTongSoPhong" alignment="CENTER_RIGHT" text="0" textFill="#00c361">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefWidth="200.0" text="phòng">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Label prefWidth="300.0" text="Tổng số phòng trống:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbTongSoPhongTrong" alignment="CENTER_RIGHT" text="0" textFill="#00c361">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefWidth="200.0" text="phòng">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Label prefWidth="300.0" text="Tổng số phòng đang được đặt:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbTongSoPhongDangDuocDat" alignment="CENTER_RIGHT" text="0" textFill="#00c361">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefWidth="200.0" text="phòng">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Label prefWidth="300.0" text="Tổng số phòng đang có khách:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbTongSoPhongDangCoKhach" alignment="CENTER_RIGHT" text="0" textFill="#00c361">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefWidth="200.0" text="phòng">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Label prefWidth="300.0" text="Các phòng đắt nhất:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbPhongDatNhat" alignment="CENTER_RIGHT" text="0" textFill="#00c361">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefWidth="200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Label prefWidth="300.0" text="Khách hàng thanh toán nhiều nhất:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbKhachHangThanhToanNhieuNhat" alignment="CENTER_RIGHT" text="&quot;&quot;" textFill="#eb0000">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Label prefWidth="300.0" text="Dịch vụ ưa chuộng nhất:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbDichVuUaChuongNhat" alignment="CENTER_RIGHT" text="&quot;&quot;" textFill="#eb0000">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Label prefWidth="300.0" text="Phiếu thanh toán tổng tiền cao nhất:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbPhieuThanhToanTongTienCaoNhat" alignment="CENTER_RIGHT" text="&quot;&quot;" textFill="#eb0000">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="8.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </VBox>
+   </top>
+   <center>
+      <HBox spacing="8.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0" BorderPane.alignment="CENTER" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Báo cáo phân phối thiết bị:" textFill="#ea1ab3">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tv_phanPhoiTb" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="soPhongColumn" prefWidth="95.0" text="Số phòng" />
+                      <TableColumn fx:id="soThietBiHienTaiColumn" prefWidth="160.0" text="Số thiết bị hiện tại" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets bottom="100.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Chi tiết thiết bị mỗi phòng:" textFill="#ea1ab3">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" spacing="8.0">
+                     <children>
+                        <Label text="Chọn phòng:" />
+                        <ComboBox fx:id="cbPhong" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tv_chiTietTb" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="idtbColumn" prefWidth="95.0" text="ID Thiết bị" />
+                        <TableColumn fx:id="tentbColumn" prefWidth="160.0" text="Tên Thiết Bị" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="100.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </HBox>
+   </center>
+</BorderPane>

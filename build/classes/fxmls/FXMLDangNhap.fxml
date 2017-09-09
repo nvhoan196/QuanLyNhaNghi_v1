@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="450.0" prefWidth="450.0" spacing="16.0" style="-fx-background-color: rgba(199,237,252,1);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmls.FXMLDangNhapController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Đăng nhập tài khoản">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#e40e0e" />
+                  <Stop color="#0957d6" offset="0.5287356321839072" />
+                  <Stop color="#0cae00" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <HBox alignment="CENTER" spacing="16.0" style="-fx-background-color: #f8c164; -fx-background-radius: 20;">
+         <children>
+            <VBox spacing="16.0">
+               <children>
+                  <Label text="Username">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets top="6.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </VBox>
+            <VBox spacing="8.0">
+               <children>
+                  <TextField fx:id="tfUsername" prefWidth="200.0" />
+                  <PasswordField fx:id="tfPassword" onAction="#dangNhap" />
+               </children>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="16.0">
+         <children>
+            <CheckBox fx:id="cbNangCao" mnemonicParsing="false" text="Tùy chọn nâng cao">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </CheckBox>
+            <Button fx:id="btnDangNhap" mnemonicParsing="false" onAction="#dangNhap" text="Đăng nhập" textFill="#200c6f">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnHuyBo" mnemonicParsing="false" onAction="#huyBo" text="Hủy bỏ" textFill="#da0d0d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </HBox>
+      <VBox fx:id="vboxNangCao">
+         <children>
+            <HBox alignment="CENTER" spacing="16.0">
+               <children>
+                  <VBox spacing="13.0">
+                     <children>
+                        <Label text="IP:" />
+                        <Label text="Port:" />
+                        <Label text="Database Name:" />
+                     </children>
+                     <padding>
+                        <Insets top="6.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefWidth="200.0" spacing="8.0">
+                     <children>
+                        <TextField fx:id="tfIp" maxWidth="1.7976931348623157E308" text="127.0.0.1" />
+                        <TextField fx:id="tfPort" maxWidth="1.7976931348623157E308" text="5432" />
+                        <TextField fx:id="tfDbName" maxWidth="1.7976931348623157E308" text="quanlykhachsan" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="32.0" left="16.0" right="16.0" top="16.0" />
+   </padding>
+</VBox>

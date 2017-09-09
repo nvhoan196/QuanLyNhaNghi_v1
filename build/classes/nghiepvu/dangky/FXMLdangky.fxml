@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="1000.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nghiepvu.dangky.FXMLdangkyController">
+   <center>
+      <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE" tabMinHeight="50.0" tabMinWidth="200.0" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="THÔNG TIN KHÁCH HÀNG">
+               <content>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <VBox alignment="TOP_CENTER" spacing="8.0" GridPane.columnIndex="1">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label text="Khách Hàng" textFill="#ea1ab3">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="CMND *:">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Label>
+                                    <TextField fx:id="tfCmnd" HBox.hgrow="ALWAYS" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Mã KH *:">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Label>
+                                    <TextField fx:id="tfMaKh" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="btnTuDongTaoMaKh" mnemonicParsing="false" prefWidth="200.0" text="Tự động tạo" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Tên *:">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Label>
+                                    <TextField fx:id="tfTen" HBox.hgrow="ALWAYS" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Họ và đệm *:">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Label>
+                                    <TextField fx:id="tfHoDem" HBox.hgrow="ALWAYS" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Giới tính:" />
+                                    <ComboBox fx:id="cbGioiTinh" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Số đt:" />
+                                    <TextField fx:id="tfSdt" HBox.hgrow="ALWAYS" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Địa chỉ:" />
+                                    <TextField fx:id="tfDiaChi" HBox.hgrow="ALWAYS" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Quốc tịch:" />
+                                    <TextField fx:id="tfQuocTich" HBox.hgrow="ALWAYS" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Email:" />
+                                    <TextField fx:id="tfEmail" HBox.hgrow="ALWAYS" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <VBox spacing="8.0">
+                                 <children>
+                                    <HBox spacing="8.0">
+                                       <children>
+                                          <Button fx:id="btnLamMoiKh" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Làm mới các trường" HBox.hgrow="ALWAYS" />
+                                          <Button fx:id="btnTimKiemKhachHang" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Tìm kiếm" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox spacing="8.0">
+                                       <children>
+                                          <Button fx:id="btnThemKhMoi" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Thêm KH mới" HBox.hgrow="ALWAYS" />
+                                          <Button fx:id="btnCapNhatKhachHang" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Cập nhật KH" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <Button fx:id="btnChonKhachHang" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Chọn khách hàng" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets bottom="8.0" left="8.0" right="16.0" top="8.0" />
+                           </GridPane.margin>
+                        </VBox>
+                        <TableView fx:id="tvKh">
+                           <GridPane.margin>
+                              <Insets bottom="30.0" left="8.0" right="8.0" top="8.0" />
+                           </GridPane.margin>
+                        </TableView>
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab text="CHỌN PHÒNG">
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="NEVER" minWidth="200.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0">
+                           <children>
+                              <TableView fx:id="tbPhong_tv" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" />
+                                 </VBox.margin></TableView>
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" spacing="8.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label text="Danh sách phòng trống" textFill="#ea1ab3">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnLamMoiPhong" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Làm mới danh sách" GridPane.columnIndex="1" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="btnChonPhong" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Chọn phòng" VBox.vgrow="ALWAYS" />
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </VBox>
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab text="PHIẾU ĐĂNG KÝ">
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+                        <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TableView fx:id="tvPdk" editable="true">
+                           <GridPane.margin>
+                              <Insets bottom="30.0" left="8.0" right="8.0" top="8.0" />
+                           </GridPane.margin></TableView>
+                        <VBox alignment="TOP_CENTER" spacing="8.0" GridPane.columnIndex="1">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label text="Phiếu Đăng Ký" textFill="#ea1ab3">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label prefWidth="130.0" text="Mã phiếu ĐK *:">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Label>
+                                    <TextField fx:id="tfMaPdk" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="btnTuDongTaoMaPdk" mnemonicParsing="false" prefWidth="200.0" text="Tự động tạo" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Họ tên KH:" />
+                                    <Label fx:id="lbhoTen" prefWidth="200.0" textFill="#2e5fd0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Label>
+                                    <Label prefWidth="90.0" text="Mã KH *:">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="lbMaKh" prefWidth="60.0" textFill="#f23a3a">
+                                       <font>
+                                          <Font name="System Bold Italic" size="15.0" />
+                                       </font></Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Phòng *:">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="lbPhong" prefWidth="200.0" textFill="#2e5fd0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Label>
+                                    <Label prefWidth="90.0" text="Loại Phòng:" />
+                                    <Label fx:id="lbLoaiPhong" prefWidth="150.0" textFill="#f23a3a">
+                                       <font>
+                                          <Font name="System Bold Italic" size="15.0" />
+                                       </font></Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label fx:id="lbDaNhanPhong" prefWidth="288.0" textFill="#04cd1b">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbDaThanhToan" prefWidth="200.0" textFill="#04cd1b">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label prefWidth="130.0" text="Ngày đăng kí *:">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Label>
+                                    <TextField fx:id="tfNgayDangKy" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="btnLayNgayHomNay_NgayDk" mnemonicParsing="false" prefWidth="200.0" text="Lấy hôm nay" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label prefWidth="130.0" text="Ngày đến *:">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Label>
+                                    <TextField fx:id="tfNgayDen" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="btnLayNgayHomNay_NgayDen" mnemonicParsing="false" prefWidth="200.0" text="Lấy hôm nay" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label prefWidth="130.0" text="Số trẻ em:" />
+                                    <TextField fx:id="tfSoTreEm" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label prefWidth="130.0" text="Số người lớn:" />
+                                    <TextField fx:id="tfSoNguoiLon" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label prefWidth="130.0" text="Thời gian ở:" />
+                                    <TextField fx:id="tfThoiGianO" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="btnTinhDenGio" mnemonicParsing="false" prefWidth="200.0" text="Tính đến giờ" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label prefWidth="130.0" text="Trả trước:" />
+                                    <TextField fx:id="tfTraTruoc" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <VBox spacing="8.0">
+                                 <children>
+                                    <HBox spacing="8.0">
+                                       <children>
+                                          <Button fx:id="btnLamMoiPdk" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Làm mới" HBox.hgrow="ALWAYS" />
+                                          <Button fx:id="btnTimKiemPdk" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Tìm kiếm" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox spacing="8.0">
+                                       <children>
+                                          <Button fx:id="btnTaoPhieuDangKy" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Tạo PDK" HBox.hgrow="ALWAYS" />
+                                          <Button fx:id="btnCapNhatPdk" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Cập nhật PĐK" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                       <children>
+                                          <Button fx:id="btnNhanPhong" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Nhận phòng" HBox.hgrow="ALWAYS" />
+                                          <Button fx:id="btnHuyPdk" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Hủy PĐK" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets bottom="8.0" left="8.0" right="16.0" top="8.0" />
+                           </GridPane.margin>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0" GridPane.columnIndex="3">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label text="Thông Tin Thanh Toán" textFill="#ea1ab3">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Tiền phòng:" />
+                                    <Label fx:id="lbTienPhong" text="0" textFill="#522eee">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefWidth="100.0" text="VNĐ" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Tiền dịch vụ:" />
+                                    <Label fx:id="lbTienDichVu" text="0" textFill="#522eee">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefWidth="100.0" text="VNĐ" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Trả trước:" />
+                                    <Label fx:id="lbTraTruoc" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefWidth="100.0" text="VNĐ" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Tổng tiền:" />
+                                    <Label fx:id="lbTongTien" text="0" textFill="#ff1a1a">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefWidth="100.0" text="VNĐ" />
+                                 </children>
+                              </HBox>
+                              <VBox spacing="8.0">
+                                 <children>
+                                    <Button fx:id="btnTinhTien" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Tính tiền" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="btnThanhToan" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Thanh Toán" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <GridPane.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </GridPane.margin>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" />
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab text="ĐĂNG KÝ DỊCH VỤ">
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="NEVER" prefWidth="200.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="90.0" valignment="CENTER" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TableView fx:id="tbDichVu_tv" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </GridPane.margin>
+                        </TableView>
+                        <TableView fx:id="tbSddv_tableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </GridPane.margin>
+                        </TableView>
+                        <Label text="Các dịch vụ sẵn có" textFill="#ea1ab3" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Các dịch vụ đã đăng ký" textFill="#3a1ce8" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <TextField fx:id="tfSoLuong_dv" promptText="Nhập số lượng dịch vụ" />
+                              <Button fx:id="btnThemDichVu" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Đăng ký &gt;&gt;" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="btnXoaDichVu" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Xóa dịch vụ" VBox.vgrow="ALWAYS" />
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                           <children>
+                              <HBox spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Mã PĐK:">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMaPdk_dv" textFill="#3a1ce8">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Họ tên KH:">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbHoTen_dv" textFill="#3a1ce8">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="8.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Phòng:">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbPhong_dv" textFill="#3a1ce8">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

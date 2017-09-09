@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmls.FXMLMainFormController">
+   <center>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #f0fafe;" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane fx:id="tabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #f0fafe;" tabClosingPolicy="ALL_TABS" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefWidth="300.0" style="-fx-background-color: #06729d;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefWidth="100.0" spacing="8.0" style="-fx-background-color: #f0fafe; -fx-background-radius: 20;">
+               <children>
+                  <Label text="Thông tin người dùng" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox spacing="8.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <Label text="Họ tên:" />
+                              <Label text="Username:" />
+                              <Label text="Email:" />
+                              <Label text="Loại TK:" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label fx:id="lblHoTen" text="lblHoTen" />
+                              <Label fx:id="lblUsername" text="lblUsername" />
+                              <Label fx:id="lblEmail" text="lblEmail" />
+                              <Label fx:id="lblLoaiTk" text="lblLoaiTk" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="8.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" style="-fx-background-color: #f0fafe; -fx-background-radius: 20;">
+               <children>
+                  <Label text="Nghiệp vụ" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Accordion fx:id="accordionNghiepVu">
+                     <panes>
+                        <TitledPane fx:id="nghiepVuTitlePane" text="Thao Tác">
+                           <content>
+                              <VBox>
+                                 <children>
+                                    <Hyperlink fx:id="hlDatPhong" text="Giao dịch khách hàng">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Hyperlink>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                     </panes>
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </Accordion>
+               </children>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER" style="-fx-background-color: #f0fafe; -fx-background-radius: 20;">
+               <children>
+                  <Label text="Danh mục" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Accordion fx:id="accordion">
+                    <panes>
+                      <TitledPane fx:id="danhMucTitlePane" text="Danh Mục">
+                           <content>
+                              <VBox>
+                                 <children>
+                                    <Hyperlink fx:id="hlLoaiTaiKhoan" text="Loại Tài Khoản">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="hlTaiKhoan" text="Tài Khoản">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="hlLoaiPhong" layoutX="20.0" layoutY="48.0" text="Loại Phòng">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="hlPhong" layoutX="20.0" layoutY="76.0" text="Phòng">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="hlThietBi" layoutX="20.0" layoutY="104.0" text="Thiết Bị">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="hlDichVu" layoutX="20.0" layoutY="132.0" text="Dịch Vụ">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="hlKhachHang" layoutX="20.0" layoutY="160.0" text="Khách Hàng">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="hlPhieuDangKy" layoutX="20.0" layoutY="188.0" text="Phiếu Đăng Ký">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="hlDanhSachTb" text="Danh Sách Thiết Bị">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="hlSuDungDv" text="Sử Dụng Dịch Vụ">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="hlPhieuThanhToan" text="Phiếu Thanh Toán">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Hyperlink>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                    </panes>
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </Accordion>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Hệ Thống">
+            <items>
+              <MenuItem fx:id="miTaiKhoanCaNhan" mnemonicParsing="false" text="Tài Khoản Cá Nhân" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Chức Năng">
+              <items>
+                  <MenuItem fx:id="miGiaoDichKhachHang" mnemonicParsing="false" text="Giao dịch khách hàng" />
+              </items>
+            </Menu>
+          <Menu fx:id="mnDanhMuc" mnemonicParsing="false" text="Danh Mục">
+            <items>
+              <MenuItem fx:id="miLoaiTaiKhoan" mnemonicParsing="false" text="Loại Tài Khoản" />
+                  <MenuItem fx:id="miTaiKhoan" mnemonicParsing="false" text="Tài Khoản" />
+                  <MenuItem fx:id="miLoaiPhong" mnemonicParsing="false" text="Loại Phòng" />
+                  <MenuItem fx:id="miPhong" mnemonicParsing="false" text="Phòng" />
+                  <MenuItem fx:id="miThietBi" mnemonicParsing="false" text="Thiết Bị" />
+                  <MenuItem fx:id="miDichVu" mnemonicParsing="false" text="Dịch Vụ" />
+                  <MenuItem fx:id="miKhachHang" mnemonicParsing="false" text="Khách Hàng" />
+                  <MenuItem fx:id="miPhieuDangKy" mnemonicParsing="false" text="Phiếu Đăng Ký" />
+                  <MenuItem fx:id="miDanhSachTb" mnemonicParsing="false" text="Danh Sách Thiết Bị" />
+                  <MenuItem fx:id="miSuDungDv" mnemonicParsing="false" text="Sử Dụng Dịch Vụ" />
+                  <MenuItem fx:id="miPhieuThanhToan" mnemonicParsing="false" text="Phiếu Thanh Toán" />
+            </items>
+          </Menu>
+            <Menu fx:id="mnBaoCao" mnemonicParsing="false" text="Báo Cáo">
+              <items>
+                <MenuItem fx:id="miBaoCaoPhong" mnemonicParsing="false" text="Doanh thu phòng" />
+                  <MenuItem fx:id="miBaoCaoDichVu" mnemonicParsing="false" text="Doanh thu dịch vụ" />
+                  <MenuItem fx:id="miBaoCaoTongHop" mnemonicParsing="false" text="Tổng hợp" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Trợ giúp">
+            <items>
+              <MenuItem fx:id="miTacGia" mnemonicParsing="false" text="Tác Giả" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

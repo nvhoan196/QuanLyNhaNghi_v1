@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menuitems.taikhoancanhan.FXMLtaikhoancanhanController">
+   <center>
+      <HBox alignment="CENTER">
+         <children>
+            <TitledPane alignment="CENTER" animated="false" collapsible="false" prefHeight="470.0" prefWidth="540.0" text="Thông Tin Cá Nhân">
+               <content>
+                  <VBox BorderPane.alignment="CENTER" HBox.hgrow="NEVER" VBox.vgrow="NEVER">
+                     <children>
+                        <HBox prefWidth="200.0" spacing="8.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Username:" />
+                              <Label fx:id="lbUsername" prefWidth="300.0" text="Chưa rõ" textFill="#009900">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefWidth="200.0" spacing="8.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Loại tài khoản:" />
+                              <Label fx:id="lbLoaiTk" prefWidth="300.0" text="Chưa rõ" textFill="#cc0000">
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font></Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefWidth="200.0" spacing="8.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Tên:" />
+                              <TextField fx:id="tfFirstName" prefWidth="300.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefWidth="200.0" spacing="8.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Họ và tên đệm:" />
+                              <TextField fx:id="tfLastName" prefWidth="300.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefWidth="200.0" spacing="8.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Giới tính:" />
+                              <ComboBox fx:id="cbGioiTinh" prefWidth="300.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefWidth="200.0" spacing="8.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Số CMND:" />
+                              <TextField fx:id="tfCmnd" prefWidth="300.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefWidth="200.0" spacing="8.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Địa chỉ:" />
+                              <TextField fx:id="tfDiaChi" prefWidth="300.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefWidth="200.0" spacing="8.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Email:" />
+                              <TextField fx:id="tfEmail" prefWidth="300.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefWidth="200.0" spacing="8.0">
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                           <children>
+                              <Button fx:id="btnCapNhatThongTin" mnemonicParsing="false" prefWidth="300.0" text="Cập Nhật Thông Tin">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="208.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </padding>
+                  </VBox>
+               </content>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TitledPane>
+            <TitledPane alignment="CENTER" animated="false" collapsible="false" prefHeight="470.0" prefWidth="540.0" text="Thay Đổi Mật Khẩu">
+               <content>
+                  <VBox BorderPane.alignment="CENTER" HBox.hgrow="NEVER" VBox.vgrow="NEVER">
+                     <children>
+                        <HBox prefWidth="200.0" spacing="8.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Mật Khẩu Cũ" />
+                              <PasswordField fx:id="tfPassCu" prefWidth="300.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefWidth="200.0" spacing="8.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Mật Khẩu Mới" />
+                              <PasswordField fx:id="tfPassMoi" prefWidth="300.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefWidth="200.0" spacing="8.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Nhập Lại Mật Khẩu Mới" />
+                              <PasswordField fx:id="tfPassXacNhan" prefWidth="300.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefWidth="200.0" spacing="8.0">
+                           <children>
+                              <Button fx:id="btnCapNhatMatKhau" mnemonicParsing="false" prefWidth="300.0" text="Cập Nhật Mật Khẩu">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="208.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </padding>
+                  </VBox>
+               </content>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TitledPane>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
